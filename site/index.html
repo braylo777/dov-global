@@ -1,5 +1,5 @@
 <title>DOV Global PBC — One man. Every country on Earth. 25 years. One message.</title>
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action mailto:">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; font-src data:; base-uri 'none'; form-action mailto:">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="description" content="A continuous 25-year journey through all 195 nations — carrying the Gospel to every one, funded by an AI company run from the road. Claim a country. Own a piece of the map.">
@@ -15,6 +15,13 @@
  {"@type":"WebSite","name":"DOV Global PBC","url":"https://dov.global"}]}
 </script>
 <style>
+  /* DOV Chevron — bespoke chamfered-geometric display face, drawn from the emblem.
+     Embedded as a data: URI (self-contained; CSP font-src data:). Display use only. */
+  @font-face{
+    font-family:"DOV Chevron";
+    src:url("data:font/woff2;base64,d09GMgABAAAAAAp0AAoAAAAAF2wAAAomAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAgXQKo0CaCgE2AiQDgVQLbAAEIAWCYgeBDBuZEaOiZLOyMP9IjI21NWZSp00Va81aH0kkkt37oOM2i6dNfw6IORCn/PRCI37EXw1enZhRSEWNqiipqGxF5YcH+lNfBsjEhQkGfFKxxV5BN3C5BSxCxSL4j5quHQiR24EE75auPYViSbGkfK1lYU3Qw15eH/+ae7O7BVIECth1KlxtXYWr0FX78pLm798C8ZYgKWF+e8zq7J06+ZujHJJjVXnCAcp7jFxxXjaWxQOCKxrrfxbIZTVkFXCAAim/DRCQwHOK68Go7ZSyn5U94dCKCYAKWUWmShMEycGVQQirCAUefklvcigQJlK8dJlqMqO/VllZCbR0oiXIUFNtNBO/NIDKN+Fd+ADAQzUEKAXQSPFa+ZioFytGUgF7lUiiEylcPF9cgwopiv6QAJ1LZrKMKKHKRhVo/hV84W2ekRJClgU9Mx2gfChuEIrVYbHCLkDS2WKZQIVVQVem8jYQVzPbG1JI1SmDVcYMwzGmHMfStMrsX83TxjQtMIpq0av5RtGxmGF7QcUqTrsVo3SapqKqjqjpLV2VsdKog7qiXSh6QUM5hoWARkpOQowhZvsJgagTIhoQShgf4wcJNBrKldikPtRfVFm2CIx5lMEiS0JXKQQQcV2pUwtIqAwECDxzoV4Frt49F7u4nTSlBt+iO2lLHuCuaEMr3aFbvEGaSZ7d6UJAzavBUcvbFhfN2/jj4q09LO2VoovnjQVvsGdsdLtdMQll2gMKnag15nqC8eMU+3YVRhus6CVpkkacoUVKrJ83tS+QRLjNDsSLAPJQSQIAZAJKHT47iYBwzS72bT+4ZdkQA2a6fRrngW+vYm+xBnWUwFIMyq1fqG2I5pXpzn0NmJRVgsq94NzdKzWG+FGAlQKZM9MAQlxPuK3oZ5VldcY/OsuDFl2DQGhjWk6pgkOsxyB4h0YvfexeCO/TS3tUpBYPUe89x/N4YWV9DH9w2Xkn1A/p2Y7/z5s3qIo+dBNs1DyoDjCrA3rheLnGHWA03cICL61IefWuPozoKEMW1O4rfZ6d+9gdmCYhgt3l2M/66HIrT1BQ9z8jA4f2Uso71Mtg6ON4FZrahFL1YRfdW3Ln1DKC9oPXp2uHpHHr6rkLXqEtBr6f3NefiGxYNoVc4zVYFJu3BoyQ0K8aHyAqj6PYnqjAZIwwYNxVo5oPNO6KB/Wc8REY5NAbEqDKS81mfUBECCVCjmBxFz+CKm3tKm7Wbau2QStWiTb1ZJ64LnGcNH/Nm6LI5Dym7apiF13eICbY/fYnZmjHV4c2WAfLhD0G5n6vTqO8qRWPmRIYq0YeZJ+bSMqzviCxt0HXOp3ddfy5xpotYAZ4y7wSIRE3dIu2wlySbBqmuBAAXQwET3C3yzsZX5yZlGflQErFuaAk19emFeVY5TBq2IaWtcKwecJ2YjLesO6zEVdfZvejtwvhErKPIWmseVNFiBu+bEGMXcdxd1ogWk2uGL9zZmMtpxtWrcLWDmKyt4ePv9z7FUeO8Awxtn4rfq9CnV4JigRY7ZxshDLi4MLH9JUIb2CcEasJ6qC6MCSIxVAGygwKwk77AobUgKGLcfzUKm/OApKuICCU0Jw+EwcCBKeD7GK9JjQxoKBqJ5v6lBq36sP0pPFXZ+aUzMNnhUOpE9Thiz3be+9xG+Gz0T2q74ONp2Wmhz11t9B2f4suLdKDEDTGKSR4msoq+p+6DKsCew0KINarRT5FUH1yOf0jp0zTMaBvo6bQSPi38RuJye6Df6wO/dFaVav3wulwbo+KVQsXGj4asJMYQzaKWZ85QqxTx7DEsHhLcQTZcHktFweKPBj6L3FylAEQbEPEU+LifQoAZI7EaYYeOLh73ZgvCV/s3R1d4XqZON2YC/XcFE279lW1VC2A9N4mribIvsFozWnWshlI4wb6SFf1y2a6dc2bZkF/y5CuVI5JZv1/ntWwTp5rYRYz0NNP8NmgekvqivDdkl/HqN/Dlm+xx2jMbFZ3UiOp6cZzOLdxYr2qo8buHoIFPQbrk2xDcqcQX8TvgzjCnDA0USRHJmPZjFMpm8s4IZp9dW011G/he+yN//dEz7eYo4Xh4x06HhtqMrPg+axlxx7hJw+lnrYwdBgvDI82W7YNnZw/dNOt9zBHg2VNJpiUHQe54PczwKxQNVWMV1rmuliYqWSS1npvPsaX3MEyTjYqUcP5Yo42djpDfXJ7p4c6+xsFyuQaV428DAruOXUPccbuLBuqaEucdExDnBLXQUKOKGXsjpq/VebTK7Qj6iiUtYJz3T7D5nkx86qFB4/j+tI+h7UX023z7SOZ+g3+RF2zRVoAYJxLL2PTPEwyS5HKMmG060goC6Mkc4+s5IjLA9C4GaeHxKUmk2eaiF6qt06c1RBf7EucTCc7/lQsXO5WpUoHe06l47fgMCtCJ9xduGVzK2mzcn0raeLNkpqISTCiBydHzhG9L+Js/TpUe5ULffBsyYoRU4mTJ2sZAelA7cQ9+9EpehdxQgmF5E0cTWQh46wriUIjdUXlxK7EKbw/BfHvT6y3wAYdws6MDxly5uvYq7c6Q6qp2Nl5ETV99SN5woTFi5Fj8o9XaTRJis0JOBEzd7b7bHTDR+tYKXEW4wvvKYauUcM+aB7tQC3ZDuKU3X5QCwNv/u9005Q8PDutatFOUkq7KtUO8nZjtcPHChDG5kXkxbdER7PrHwc6iTidY2bX9JFYYysoMCgNJSXiKXGCifGXRheUGctxGeFIT4/ublO792kApwezwUQH6p1Y6yCrtaOArTu5umqw17fTOoTTeQJKx48pYvTkF0mNcTCUcopfEqNR81pE/NUhqk7r68w6eOFHQECqMgBipxMGJ+CgD9HV28fHZcXSSZ6bRM+knWLQGKiGIElKaXBXQbDk58062m+zB7jUwCC7Odhv+HycBSv9C7qoaqmy/2DE8xrVy1vC4FKGoums9Yfae8D6HJVD0pjsMW9FW2edFFFZBa05u1ev3p1jlS4XFoqdxSAvo56Tyf9W35UiCQG9GVr1yuzVxIt9cwb5SwB43mmtLyGTQs8k7QVjixwyM/VF5Sh5X6DyLgOiVVJncvQVp3LZFlRaTOiMPllvAE2jPelb/9ZaZpWcVacrF99TpAsOQEeUmxDD98D8SwA+AsIUITZcngOEWkE19PuKPRpJxshfOK+aWt0xazCIn8akCnCDX6oMTtBYFRmpDvBA+KMd4SuJHILCBYAOh1QBau1TZfCEzaqAVAcEmTTPEaI1PKf4yxENuQbj924V2VRj21a9u3fp/I+Qtc886hLjEhLka3NxLDwDOHJQDK166IguaI5mRGatXBhgrE+SgEpT1MxGtEUr9EZ35frOyGfq26CXCW8m4sWs7I4eaJc5UStRnIQzmq8Wt4uF45Ahfc3JgBjR4qWKECmJThS9atLEkiQLl0KULkOCREymONX5UVJR8xcgUJBgIXx4IZSGt+1whcNbIXa+3OAOF3hCDgAA") format("woff2");
+    font-weight:400 800;font-display:swap;
+  }
   :root{
     --bg:#0A0A0B; --surface:#141417; --surface-2:#1A1A1E; --border:#26262B;
     --text:#F5F5F6; --muted:#A6A8AE; --faint:#7c7e84;
@@ -24,8 +31,15 @@
     --maxw:1120px; --gutter:clamp(20px,5vw,48px); --section-y:clamp(78px,10vw,140px);
     --radius:14px; --radius-sm:10px; --ease:cubic-bezier(.2,.7,.2,1);
     --ff:"Helvetica Neue",Helvetica,"Segoe UI",system-ui,Arial,sans-serif;
+    --ff-display:"DOV Chevron","Helvetica Neue",Helvetica,system-ui,Arial,sans-serif;
     accent-color:var(--gold);
   }
+  /* Display type -> DOV Chevron. All-caps face, so uppercase + open tracking. */
+  h1,h2,.eyebrow,.brand span,.foot-top span,.count b,.num,.latin .lat{
+    font-family:var(--ff-display);text-transform:uppercase;
+  }
+  h1,h2{letter-spacing:.02em;font-weight:700}
+  .num,.count b{letter-spacing:.01em;font-feature-settings:"tnum"}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   ::selection{background:rgba(200,162,75,.35);color:var(--text)}
