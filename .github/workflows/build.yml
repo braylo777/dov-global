@@ -1,0 +1,17 @@
+name: build-check
+on:
+  push: { branches: [main] }
+  pull_request: { branches: [main] }
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Static-site sanity checks
+        run: |
+          test -f site/index.html || { echo "missing site/index.html"; exit 1; }
+          test -f site/_headers   || { echo "missing site/_headers"; exit 1; }
+          # self-contained guard: no external http(s) asset refs (data: URIs allowed)
+          if grep -Eo '(src|href)="https?://[^"]+' site/index.html; then
+            echo "ERROR: external asset reference found — site must be self-contained"; exit 1; fi
+          echo "OK: self-contained single-page site"

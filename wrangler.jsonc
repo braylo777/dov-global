@@ -1,0 +1,8 @@
+{
+  // dov.global — static single-page site served via Cloudflare Workers Assets.
+  // Pure static (no worker, no D1). Live domain not attached yet → workers.dev URL.
+  "name": "dov-global",
+  "compatibility_date": "2025-01-01",
+  "assets": { "directory": "./site", "not_found_handling": "single-page-application" },
+  "workers_dev": true
+}
